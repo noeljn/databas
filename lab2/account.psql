@@ -14,7 +14,7 @@ INSERT INTO Account_info VALUES ('13','Lynn_Ball','1959-06-28','LynnBall@mail.se
 INSERT INTO Account_info VALUES ('14','Mitchel_Bautista','1962-04-20','MitchelBautista@mail.se','6737798691','Politikträsk 4','password');
 INSERT INTO Account_info VALUES ('15','Layla-Mae_Gomez','1968-07-13','Layla-MaeGomez@mail.se','6360655003','Nagelbo 32','password');
 INSERT INTO Account_info VALUES ('16','Efa_Kent','1972-12-18','EfaKent@mail.se','6268645295','Hyradal 72','password');
-INSERT INTO Account_info VALUES ('17','Aydin_O'Reilly','1977-04-02','AydinO'Reilly@mail.se','2166989476','Magnetiseraddal 23','password');
+INSERT INTO Account_info VALUES ('17','Aydin_O-Reilly','1977-04-02','AydinO'Reilly@mail.se','2166989476','Magnetiseraddal 23','password');
 INSERT INTO Account_info VALUES ('18','Kaleem_Handley','1977-12-12','KaleemHandley@mail.se','6732167967','Arbetesväg 40','password');
 INSERT INTO Account_info VALUES ('19','Maia_Lynch','1978-08-18','MaiaLynch@mail.se','8349425199','Paraplyträsk 42','password');
 INSERT INTO Account_info VALUES ('20','Dougie_Bryan','1980-02-11','DougieBryan@mail.se','1999617844','Lockdal 89','password');
