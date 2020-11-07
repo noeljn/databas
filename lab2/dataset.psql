@@ -48,6 +48,7 @@ CREATE TABLE Admins (
     CONSTRAINT fk_account_admin
         FOREIGN KEY(account_id)
         REFERENCES Account_info(account_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE Users (
