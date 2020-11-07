@@ -84,8 +84,8 @@ CREATE TABLE Subscription_plan(
 );
 
 CREATE TABLE Watchlist (
-    user_id int REFERENCES Users(user_id) ON DELETE CASCADE,
-    media_id int REFERENCES Media(media_id) ON DELETE CASCADE,
+    user_id int REFERENCES Users(user_id),
+    media_id int REFERENCES Media(media_id),
     rating int,
     progress int NOT NULL,
     PRIMARY KEY (user_id, media_id)
