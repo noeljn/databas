@@ -2,7 +2,7 @@ INSERT INTO Casts VALUES ('1','SaniyaHudson');
 INSERT INTO Casts VALUES ('1','FrancoCurrie');
 INSERT INTO Casts VALUES ('1','Lacey-MaeMclellan');
 INSERT INTO Casts VALUES ('2','JaiStark');
-INSERT INTO Casts VALUES ('2','MuhammedO'Sullivan');
+INSERT INTO Casts VALUES ('2','MuhammedO-Sullivan');
 INSERT INTO Casts VALUES ('3','DevonteMcgill');
 INSERT INTO Casts VALUES ('3','JorjaOsborne');
 INSERT INTO Casts VALUES ('4','EvangelineRoss');
