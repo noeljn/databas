@@ -57,7 +57,6 @@ CREATE TABLE Users (
     CONSTRAINT fk_users_customer
         FOREIGN KEY(account_id)
         REFERENCES Customer(account_id)
-        ON DELETE CASCADE
 );
 
 CREATE TABLE Subscription_type (
