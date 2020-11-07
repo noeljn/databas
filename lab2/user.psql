@@ -148,6 +148,3 @@ INSERT INTO Users VALUES ('147','49','Lashell');
 INSERT INTO Users VALUES ('148','50','Bert');
 INSERT INTO Users VALUES ('149','50','Dionna');
 INSERT INTO Users VALUES ('150','50','Devona');
-INSERT INTO Users VALUES ('151','51','');
-INSERT INTO Users VALUES ('152','51','');
-INSERT INTO Users VALUES ('153','51','');
