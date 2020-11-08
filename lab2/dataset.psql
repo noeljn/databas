@@ -84,11 +84,15 @@ CREATE TABLE Subscription_plan(
 );
 
 CREATE TABLE Watchlist (
-    user_id int REFERENCES Users(user_id),
+    user_id int,
     media_id int REFERENCES Media(media_id),
     rating int,
     progress int NOT NULL,
     PRIMARY KEY (user_id, media_id)
+    CONSTRAINT fk_watchlist_users
+        FOREIGN KEY(user_id)
+        REFERENCES Users(user_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE Series_watchlist (
@@ -98,6 +102,7 @@ CREATE TABLE Series_watchlist (
     episode_progress int NOT NULL,
     season_progress int NOT NULL,
     PRIMARY KEY (user_id, series_id)
+    
 );
 
 CREATE TABLE Transactions(
