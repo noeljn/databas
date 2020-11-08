@@ -190,3 +190,12 @@ INSERT INTO Watchlist VALUES ('43', '1013', '8', '100');
 INSERT INTO Watchlist VALUES ('45', '1014', '7', '99');
 INSERT INTO Watchlist VALUES ('89', '1014', '7', '97');
 INSERT INTO Watchlist VALUES ('86', '1014', '3', '44');
+
+INSERT INTO Watchlist
+VALUES ('120', '2', '7', '98');
+
+INSERT INTO Watchlist
+VALUES ('110', '2', '8', '100');
+
+INSERT INTO Watchlist
+VALUES ('66', '2', '5', '56');
