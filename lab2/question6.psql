@@ -1,1 +1,195 @@
-hello
+INSERT INTO Media VALUES ('1000','Out of the Past','2018','0','USA');
+INSERT INTO Media VALUES ('1001','Fallen Angel','2018','0','USA');
+INSERT INTO Media VALUES ('1002','In a Lonely Place','2018','0','USA');
+INSERT INTO Media VALUES ('1003','Force of Evil','2018','0','USA');
+INSERT INTO Media VALUES ('1004','The Wrong Man','2018','0','USA');
+INSERT INTO Media VALUES ('1005','Man with My Face','2018','0','USA');
+INSERT INTO Media VALUES ('1006','Nora Inu','2018','0','USA');
+INSERT INTO Media VALUES ('1007','Clash by Night','2018','0','USA');
+INSERT INTO Media VALUES ('1008','Rage in Heaven','2018','0','USA');
+INSERT INTO Media VALUES ('1009','The Killers','2018','0','USA');
+INSERT INTO Media VALUES ('1010','Three Monks: Wild now', '2005', 90, 'China');
+INSERT INTO Media VALUES ('1011','Force of one, A', '2001', 121, 'China');
+INSERT INTO Media VALUES ('1012','Dharti Ke Lal','1992', '104', 'USA');
+INSERT INTO Media VALUES ('1013','Two drops of water','2003','120','India');
+INSERT INTO Media VALUES ('1014','Time of a Dancer','2015','117','USA');
+INSERT INTO Media VALUES ('1015','Harry Potter and the Prisoner of Azkaban','2004','142','USA');
+INSERT INTO Media VALUES ('1016','Shrek the Third','2007','USA','93');
+INSERT INTO Media VALUES ('1017','Star Wars: Return of the Jedi','1983','132','USA');
+INSERT INTO Media VALUES ('1018','Star Wars: The Last Jedi','2007','152','USA');
+INSERT INTO Media VALUES ('1019','Alvin and the Chipmunks','2007','92','USA');
+INSERT INTO Media VALUES ('1020','Alvin and the Chipmunks: The Squeakquel','2009','89','USA');
+INSERT INTO Media VALUES ('1021','Alvin and the Chipmunks: Chipwreaked','2011','92','USA');
+INSERT INTO Media VALUES ('1022','Mission: Impossible 2','2000','123','USA');
+INSERT INTO Media VALUES ('1023','Mission: Impossible','1996','110','USA');
+INSERT INTO Media VALUES ('1024','Harry Potter and the Philosophers Stone','2001','152','USA');
+INSERT INTO Media VALUES ('1025','Harry Potter and the Chamber of Secrets','2002','161','USA');
+
+INSERT INTO Watchlist VALUES ('146','1017','7','64');
+INSERT INTO Watchlist VALUES ('129','1017','2','99');
+INSERT INTO Watchlist VALUES ('127','1017','9','90');
+INSERT INTO Watchlist VALUES ('2','1018','7','64');
+INSERT INTO Watchlist VALUES ('76','1018','2','99');
+INSERT INTO Watchlist VALUES ('45','30','9','90');
+
+INSERT INTO Watchlist VALUES ('61','1016','7','64');
+INSERT INTO Watchlist VALUES ('42','1016','8','99');
+INSERT INTO Watchlist VALUES ('100','53','1','99');
+INSERT INTO Watchlist VALUES ('70','53','8','99');
+
+INSERT INTO Watchlist VALUES ('140','1019','2','69');
+INSERT INTO Watchlist VALUES ('123','1019','3','86');
+INSERT INTO Watchlist VALUES ('23','1019','5','90');
+INSERT INTO Watchlist VALUES ('54','1019','4','99');
+INSERT INTO Watchlist VALUES ('65','1019','7','75');
+
+INSERT INTO Watchlist VALUES ('6','1020','7','64');
+INSERT INTO Watchlist VALUES ('8','1020','2','99');
+INSERT INTO Watchlist VALUES ('45','1020','9','90');
+INSERT INTO Watchlist VALUES ('52','1020','4','56');
+INSERT INTO Watchlist VALUES ('89','1020','7','75');
+
+INSERT INTO Watchlist VALUES ('1','1021','7','64');
+INSERT INTO Watchlist VALUES ('10','1021','8','12');
+INSERT INTO Watchlist VALUES ('11','1021','9','50');
+INSERT INTO Watchlist VALUES ('61','1021','4','56');
+INSERT INTO Watchlist VALUES ('34','1021','1','75');
+
+INSERT INTO Watchlist VALUES ('1','1022','7','64');
+INSERT INTO Watchlist VALUES ('10','1022','8','12');
+INSERT INTO Watchlist VALUES ('45','1023','9','90');
+INSERT INTO Watchlist VALUES ('74','1023','5','99');
+INSERT INTO Watchlist VALUES ('132','27','5','99');
+INSERT INTO Watchlist VALUES ('142','27','7','75');
+INSERT INTO Watchlist VALUES ('111','27','4','63');
+
+INSERT INTO Watchlist VALUES ('140','1015','2','69');
+INSERT INTO Watchlist VALUES ('123','1015','1','42');
+INSERT INTO Watchlist VALUES ('23','1015','6','90');
+INSERT INTO Watchlist VALUES ('120','1024','9','69');
+INSERT INTO Watchlist VALUES ('11','1024','3','99');
+INSERT INTO Watchlist VALUES ('73','1024','8','90');
+INSERT INTO Watchlist VALUES ('131','1025','2','69');
+INSERT INTO Watchlist VALUES ('113','1025','7','23');
+INSERT INTO Watchlist VALUES ('121','1025','6','90');
+
+INSERT INTO Director VALUES ('1000','Miguel Sapochnik');
+INSERT INTO Director VALUES ('1001','Nick Hurran');
+INSERT INTO Director VALUES ('1002','Nick Hurran');
+INSERT INTO Director VALUES ('1003','Alex Graves');
+INSERT INTO Director VALUES ('1004','Uta Briesewitz');
+INSERT INTO Director VALUES ('1005','Alex Graves');
+INSERT INTO Director VALUES ('1006','Andy Goddard');
+INSERT INTO Director VALUES ('1007','Uta Briesewitz');
+INSERT INTO Director VALUES ('1008','Peter Hoar');
+INSERT INTO Director VALUES ('1009','Peter Hoar');
+
+INSERT INTO Tv_series VALUES ('1','Altered Carbon','Altered Carbon is an American cyberpunk television series created by Laeta Kalogridis and based on the 2002 novel of the same title by English author Richard K. Morgan. In a world where consciousness can be transferred to different bodies, Takeshi Kovacs, a former soldier turned investigator, must solve a murder.');
+
+INSERT INTO Episodes VALUES ('1000','1','1','1');
+INSERT INTO Episodes VALUES ('1001','1','2','1');
+INSERT INTO Episodes VALUES ('1002','1','3','1');
+INSERT INTO Episodes VALUES ('1003','1','4','1');
+INSERT INTO Episodes VALUES ('1004','1','5','1');
+INSERT INTO Episodes VALUES ('1005','1','6','1');
+INSERT INTO Episodes VALUES ('1006','1','7','1');
+INSERT INTO Episodes VALUES ('1007','1','8','1');
+INSERT INTO Episodes VALUES ('1008','1','9','1');
+INSERT INTO Episodes VALUES ('1009','1','10','1');
+
+INSERT INTO Account_info VALUES ('51','Taran Dixon','1982-12-12','TaranDixon@mail.se','4607284120','Viksväg 61','password');
+INSERT INTO Account_info VALUES ('52','Krystian Hirst','1965-11-03','KrystianHirst@mail.se','4607123650','Viksväg 62','password');
+INSERT INTO Account_info VALUES ('53','Elwood Fitzgerald','1998-07-09','ElwoodFitzgerald@mail.se','4601234650','Viksväg 64','password');
+
+INSERT INTO Admins VALUES ('51','senior');
+INSERT INTO Admins VALUES ('52','experienced');
+INSERT INTO Admins VALUES ('53','junior');
+
+INSERT INTO Credit_card VALUES ('4716404018488446','Hildegard Cartwright','2023-05-01','296');
+INSERT INTO Credit_card VALUES ('4929576499906880','Jonathon Rippin','2024-06-01','863');
+INSERT INTO Credit_card VALUES ('4417438856013892','Jadyn Koss','2023-08-01','735');
+INSERT INTO Credit_card VALUES ('4024007124430900','Jordan Pagac','2023-02-01','822');
+INSERT INTO Credit_card VALUES ('4716254860449602','Ted Hyatt','2023-09-01','903');
+INSERT INTO Credit_card VALUES ('4532898299502084','Bryce Reilly','2025-01-01','393');
+INSERT INTO Credit_card VALUES ('4485617018718913','Alvina Bartoletti','2023-02-01','307');
+INSERT INTO Credit_card VALUES ('4539271135927043','Eldon Wisoky','2022-01-01','103');
+INSERT INTO Credit_card VALUES ('4916385770670008','Jaquan Mann','2025-08-01','715');
+INSERT INTO Credit_card VALUES ('4532891547423195','Flo Jenkins','2023-12-01','404');
+INSERT INTO Credit_card VALUES ('4398541723191206','Cristina Zieme','2023-11-01','411');
+INSERT INTO Credit_card VALUES ('4716363602282666','Susan Bergnaum','2023-10-01','117');
+INSERT INTO Credit_card VALUES ('4532354643979438','Karson Deckow','2024-12-01','428');
+INSERT INTO Credit_card VALUES ('4539596484838387','Summer Gibson','2025-11-01','389');
+INSERT INTO Credit_card VALUES ('4532864281269835','Jackie Upton','2025-12-01','218');
+
+INSERT INTO Subscription_type VALUES ('standard','100');
+INSERT INTO Subscription_type VALUES ('HD+','200');
+
+INSERT INTO Subscription_plan VALUES ('1', '1', 'standard', '2020-05-01', '2020-09-01', '4716404018488446'); 
+INSERT INTO Subscription_plan VALUES ('2', '2', 'standard', '2020-02-10', '2020-07-10', '4929576499906880');
+INSERT INTO Subscription_plan VALUES ('3', '3', 'HD+', '2020-08-09', '2020-09-09', '4417438856013892'); 
+INSERT INTO Subscription_plan VALUES ('4', '4', 'standard', '2020-06-15', '2020-09-15', '4024007124430900'); 
+INSERT INTO Subscription_plan VALUES ('5', '5', 'HD+', '2020-07-21', '2020-09-21', '4716254860449602'); 
+INSERT INTO Subscription_plan VALUES ('6','40','HD+','2019-02-03','2020-03-03','4532898299502084');
+INSERT INTO Subscription_plan VALUES ('7','41','standard','2019-01-03','2020-02-03','4485617018718913');
+INSERT INTO Subscription_plan VALUES ('8','42','HD+','2020-01-03','2020-02-03','4539271135927043');
+INSERT INTO Subscription_plan VALUES ('9','43','standard','2020-01-06','2020-02-06','4916385770670008');
+INSERT INTO Subscription_plan VALUES ('10','45','standard','2020-01-07','2020-04-07','4532891547423195');
+INSERT INTO Subscription_plan VALUES ('11','46','standard','2020-01-01','2021-01-01','4398541723191206');
+INSERT INTO Subscription_plan VALUES ('12','47','HD+','2020-02-01','2022-02-01','4716363602282666');
+INSERT INTO Subscription_plan VALUES ('13','48','standard','2020-03-01','2022-03-01','4532354643979438');
+INSERT INTO Subscription_plan VALUES ('14','49','HD+','2020-04-01','2022-05-01','4539596484838387');
+INSERT INTO Subscription_plan VALUES ('15','50','standard','2020-05-01','2022-04-01','4532864281269835');
+
+INSERT INTO Genre_info VALUES ('Horror','A horror film is one that seeks to elicit fear in its audience for entertainment purposes.');
+INSERT INTO Genre_info VALUES ('Science Fiction','Science fiction (sometimes shortened to sci-fi or SF) is a genre of speculative fiction that typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life.');
+INSERT INTO Genre_info VALUES ('Comedy','In a modern sense, comedy (from the Greek: κωμῳδία, kōmōidía) is a genre of fiction that refers to any discourse or work generally intended to be humorous or amusing by inducing laughter, especially in theatre, television, film, stand-up comedy, books or any other medium of entertainment.');
+
+INSERT INTO Genre VALUES ('645','Horror');
+INSERT INTO Genre VALUES ('123','Horror');
+INSERT INTO Genre VALUES ('432','Horror');
+INSERT INTO Genre VALUES ('765','Horror');
+INSERT INTO Genre VALUES ('129','Horror');
+INSERT INTO Genre VALUES ('272','Science Fiction');
+INSERT INTO Genre VALUES ('282','Science Fiction');
+INSERT INTO Genre VALUES ('134','Science Fiction');
+INSERT INTO Genre VALUES ('106','Science Fiction');
+INSERT INTO Genre VALUES ('234','Comedy');
+INSERT INTO Genre VALUES ('967','Comedy');
+INSERT INTO Genre VALUES ('935','Comedy');
+INSERT INTO Genre VALUES ('129','Comedy');
+INSERT INTO Genre VALUES ('984','Comedy');
+
+INSERT INTO Media_prequel_sequel VALUES ('52', '53');
+INSERT INTO Media_prequel_sequel VALUES ('53', '1016');
+INSERT INTO Media_prequel_sequel VALUES ('30', '1018');
+INSERT INTO Media_prequel_sequel VALUES ('1017', '30');
+INSERT INTO Media_prequel_sequel VALUES ('1019', '1020');
+INSERT INTO Media_prequel_sequel VALUES ('1020', '2021');
+INSERT INTO Media_prequel_sequel VALUES ('1023', '1022');
+INSERT INTO Media_prequel_sequel VALUES ('1022', '27');
+INSERT INTO Media_prequel_sequel VALUES ('1024', '1025');
+INSERT INTO Media_prequel_sequel VALUES ('1025', '1015');
+
+INSERT INTO Remake VALUES ('1010', '1',);
+INSERT INTO Remake VALUES ('1011', '2',);
+INSERT INTO Remake VALUES ('1012', '3',);
+INSERT INTO Remake VALUES ('1013', '4',);
+INSERT INTO Remake VALUES ('1014', '11',);
+
+INSERT INTO Watchlist VALUES ('43', '1010', '8', '100');
+INSERT INTO Watchlist VALUES ('65', '1010', '6', '99');
+INSERT INTO Watchlist VALUES ('43', '1010', '4', '65');
+INSERT INTO Watchlist VALUES ('76', '1011', '4', '53');
+INSERT INTO Watchlist VALUES ('79', '1011', '9', '100');
+INSERT INTO Watchlist VALUES ('76', '1011', '10', '100');
+INSERT INTO Watchlist VALUES ('99', '1011', '4', '53');
+INSERT INTO Watchlist VALUES ('124', '1011', '7', '100');
+INSERT INTO Watchlist VALUES ('31', '1012', '9', '100');
+INSERT INTO Watchlist VALUES ('142', '1012', '7', '100');
+INSERT INTO Watchlist VALUES ('90', '1013', '8', '97');
+INSERT INTO Watchlist VALUES ('76', '1013', '3', '32');
+INSERT INTO Watchlist VALUES ('65', '1013', '2', '11');
+INSERT INTO Watchlist VALUES ('43', '1013', '8', '100');
+INSERT INTO Watchlist VALUES ('45', '1014', '7', '99');
+INSERT INTO Watchlist VALUES ('89', '1014', '7', '97');
+INSERT INTO Watchlist VALUES ('86', '1014', '3', '44');
