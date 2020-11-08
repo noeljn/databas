@@ -76,11 +76,15 @@ CREATE TABLE Credit_card (
 
 CREATE TABLE Subscription_plan( 
     subscription_id serial PRIMARY KEY,
-    account_id int NOT NULL REFERENCES Customer(account_id),
+    account_id int NOT NULL,
     subscription_type_name VARCHAR(255) NOT NULL REFERENCES Subscription_type(subscription_type_name),
     start_date DATE NOT NULL,
     expiration_date DATE NOT NULL,
-    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) 
+    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number),
+    CONSTRAINT fk_sub_customer
+        FOREIGN KEY(account_id)
+        REFERENCES Customer(account_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE Watchlist (
