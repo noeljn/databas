@@ -88,7 +88,7 @@ CREATE TABLE Watchlist (
     media_id int REFERENCES Media(media_id),
     rating int,
     progress int NOT NULL,
-    PRIMARY KEY (user_id, media_id)
+    PRIMARY KEY (user_id, media_id),
     CONSTRAINT fk_watchlist_users
         FOREIGN KEY(user_id)
         REFERENCES Users(user_id)
