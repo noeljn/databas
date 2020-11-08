@@ -146,7 +146,7 @@ CREATE TABLE Remake(
 );
 
 CREATE TABLE Media_prequel_sequel(
-    prequel_id INT REFERENCES Media(media_id) UNIQUE ON DELETE CASCADE,
+    prequel_id INT UNIQUE REFERENCES Media(media_id) ON DELETE CASCADE,
     sequel_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
     PRIMARY KEY (sequel_id)
 );
