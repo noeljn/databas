@@ -136,7 +136,7 @@ CREATE TABLE Remake(
 );
 
 CREATE TABLE Media_prequel_sequel(
-    prequel_id INT REFERENCES Media(media_id),
+    prequel_id INT REFERENCES Media(media_id) UNIQUE,
     sequel_id INT REFERENCES Media(media_id),
-    PRIMARY KEY (prequel_id, sequel_id)
+    PRIMARY KEY (sequel_id)
 );
