@@ -199,3 +199,6 @@ VALUES ('110', '2', '8', '100');
 
 INSERT INTO Watchlist
 VALUES ('66', '2', '5', '56');
+
+INSERT INTO Watchlist
+VALUES ('24', '2', '8', '100');
