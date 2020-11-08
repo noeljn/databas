@@ -1,14 +1,14 @@
 CREATE TABLE Media (
-    media_id serial NOT NULL PRIMARY KEY,
-    title VARCHAR(255),
+    media_id serial PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
     year int,
     length int,    
     country VARCHAR(255)
 );
 
 CREATE TABLE Tv_series(
-    series_id int NOT NULL PRIMARY KEY,
-    title VARCHAR(255),
+    series_id int PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
     synopsis VARCHAR(1000)
 );
 
@@ -62,8 +62,8 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE Subscription_type (
-    subscription_type_name VARCHAR(255) NOT NULL,
-    subscription_amount INT,
+    subscription_type_name VARCHAR(255),
+    subscription_amount INT NOT NULL,
     PRIMARY KEY(subscription_type_name)
 );
 
