@@ -1,9 +1,10 @@
 CREATE TABLE Media (
     media_id serial PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    year int,
+    release_date DATE,
     length int,    
-    country VARCHAR(255)
+    country VARCHAR(255),
+    age_rating int NOT NULL
 );
 
 CREATE TABLE Tv_series(
@@ -26,16 +27,18 @@ CREATE TABLE Episodes(
 CREATE TABLE Account_info(
     account_id serial PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    date_of_birth DATE NOT NULL,
-    email VARCHAR(255) NOT NULL,
+    date_of_birth DATE NOT NULL CHECK (date_of_birth::date < (NOW()::date - 18* INTERVAL '1 YEAR')),
+    email VARCHAR(255) NOT NULL CHECK (email ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
     phone_number VARCHAR(40) NOT NULL,
     address VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    CONSTRAINT CHK_password CHECK 
+        (len(password)>=(8) and len(password)<=(32))
 );
 
 CREATE TABLE Customer (
     account_id int PRIMARY KEY,
-    discount_percentage int NOT NULL,
+    discount_percentage int NOT NULL CHECK (discount_percentage >= 0 AND discount_percentage <= 100),
     CONSTRAINT fk_account_customer
         FOREIGN KEY(account_id)
         REFERENCES Account_info(account_id)
@@ -55,6 +58,7 @@ CREATE TABLE Users (
     user_id serial PRIMARY KEY,
     account_id int NOT NULL,
     user_name VARCHAR(255) NOT NULL,
+    age int NOT NULL,
     CONSTRAINT fk_users_customer
         FOREIGN KEY(account_id)
         REFERENCES Customer(account_id)
@@ -80,7 +84,7 @@ CREATE TABLE Subscription_plan(
     subscription_type_name VARCHAR(255) NOT NULL REFERENCES Subscription_type(subscription_type_name) ON UPDATE CASCADE,
     start_date DATE NOT NULL,
     expiration_date DATE NOT NULL,
-    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE,
+    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE CHECK (len(TRIM(cardit_card_number)) == 16),
     CONSTRAINT fk_sub_customer
         FOREIGN KEY(account_id)
         REFERENCES Customer(account_id)
