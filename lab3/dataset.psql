@@ -33,7 +33,7 @@ CREATE TABLE Account_info(
     address VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     CONSTRAINT CHK_password CHECK 
-        (len(password)>=(8) and len(password)<=(32))
+        (LENGTH(password)>=(8) and LENGTH(password)<=(32))
 );
 
 CREATE TABLE Customer (
@@ -84,7 +84,7 @@ CREATE TABLE Subscription_plan(
     subscription_type_name VARCHAR(255) NOT NULL REFERENCES Subscription_type(subscription_type_name) ON UPDATE CASCADE,
     start_date DATE NOT NULL,
     expiration_date DATE NOT NULL,
-    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE CHECK (len(TRIM(cardit_card_number)) == 16),
+    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE CHECK (LENGTH(TRIM(cardit_card_number)) == 16),
     CONSTRAINT fk_sub_customer
         FOREIGN KEY(account_id)
         REFERENCES Customer(account_id)
