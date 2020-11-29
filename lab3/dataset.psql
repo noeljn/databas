@@ -1,0 +1,152 @@
+CREATE TABLE Media (
+    media_id serial PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    year int,
+    length int,    
+    country VARCHAR(255)
+);
+
+CREATE TABLE Tv_series(
+    series_id int PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    synopsis VARCHAR(1000)
+);
+
+CREATE TABLE Episodes(
+    media_id int PRIMARY KEY,
+    series_id int NOT NULL REFERENCES Tv_series(series_id) ON DELETE CASCADE,
+    episode_number int NOT NULL,
+    season int NOT NULL,
+    CONSTRAINT fk_media
+        FOREIGN KEY(media_id)
+        REFERENCES Media(media_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Account_info(
+    account_id serial PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(40) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Customer (
+    account_id int PRIMARY KEY,
+    discount_percentage int NOT NULL,
+    CONSTRAINT fk_account_customer
+        FOREIGN KEY(account_id)
+        REFERENCES Account_info(account_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Admins (
+    account_id int PRIMARY KEY,
+    position VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_account_admin
+        FOREIGN KEY(account_id)
+        REFERENCES Account_info(account_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Users (
+    user_id serial PRIMARY KEY,
+    account_id int NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_users_customer
+        FOREIGN KEY(account_id)
+        REFERENCES Customer(account_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Subscription_type (
+    subscription_type_name VARCHAR(255),
+    subscription_amount INT NOT NULL,
+    PRIMARY KEY(subscription_type_name)
+);
+
+CREATE TABLE Credit_card (
+    credit_card_number VARCHAR(255) PRIMARY KEY,
+    card_holder_name VARCHAR(255) NOT NULL,
+    card_date DATE NOT NULL,
+    card_last_digit VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE Subscription_plan( 
+    subscription_id serial PRIMARY KEY,
+    account_id int NOT NULL,
+    subscription_type_name VARCHAR(255) NOT NULL REFERENCES Subscription_type(subscription_type_name) ON UPDATE CASCADE,
+    start_date DATE NOT NULL,
+    expiration_date DATE NOT NULL,
+    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE,
+    CONSTRAINT fk_sub_customer
+        FOREIGN KEY(account_id)
+        REFERENCES Customer(account_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Watchlist (
+    user_id int,
+    media_id int REFERENCES Media(media_id) ON DELETE CASCADE,
+    rating int,
+    progress int NOT NULL,
+    PRIMARY KEY (user_id, media_id),
+    CONSTRAINT fk_watchlist_users
+        FOREIGN KEY(user_id)
+        REFERENCES Users(user_id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE Series_watchlist (
+    user_id int REFERENCES Users(user_id) ON DELETE CASCADE,
+    series_id int REFERENCES Tv_series(series_id) ON DELETE CASCADE,
+    rating int,
+    episode_progress int NOT NULL,
+    season_progress int NOT NULL,
+    PRIMARY KEY (user_id, series_id)
+    
+);
+
+CREATE TABLE Transactions(
+    account_id INT REFERENCES Account_info(account_id) ON DELETE CASCADE,
+    date_time DATE,
+    amount INT NOT NULL,
+    PRIMARY KEY (account_id, date_time)
+);
+
+CREATE TABLE Casts(
+    media_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    staff_name VARCHAR(150),
+    PRIMARY KEY ( media_id, staff_name)
+);
+
+CREATE TABLE Director(
+    media_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    staff_name VARCHAR(150),
+    PRIMARY KEY (media_id, staff_name)
+);
+
+CREATE TABLE Genre_info(
+    genre_name VARCHAR(50) PRIMARY KEY,
+    genre_description VARCHAR(1000)
+);
+
+CREATE TABLE Genre(
+    media_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    genre_name VARCHAR(50) REFERENCES Genre_info(genre_name) ON DELETE CASCADE,
+    PRIMARY KEY (media_id, genre_name)
+);
+
+CREATE TABLE Remake(
+    media_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    original_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    PRIMARY KEY (media_id, original_id)
+);
+
+CREATE TABLE Media_prequel_sequel(
+    prequel_id INT UNIQUE REFERENCES Media(media_id) ON DELETE CASCADE,
+    sequel_id INT REFERENCES Media(media_id) ON DELETE CASCADE,
+    PRIMARY KEY (sequel_id)
+);
