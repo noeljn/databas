@@ -84,7 +84,7 @@ CREATE TABLE Subscription_plan(
     subscription_type_name VARCHAR(255) NOT NULL REFERENCES Subscription_type(subscription_type_name) ON UPDATE CASCADE,
     start_date DATE NOT NULL,
     expiration_date DATE NOT NULL,
-    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE CHECK (LENGTH(TRIM(credit_card_number)) == 16),
+    credit_card_number VARCHAR(255) NOT NULL REFERENCES Credit_card(credit_card_number) ON UPDATE CASCADE CHECK (LENGTH(TRIM(credit_card_number)) = 16),
     CONSTRAINT fk_sub_customer
         FOREIGN KEY(account_id)
         REFERENCES Customer(account_id)
