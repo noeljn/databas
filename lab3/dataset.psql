@@ -38,7 +38,7 @@ CREATE TABLE Account_info(
 
 CREATE TABLE Customer (
     account_id int PRIMARY KEY,
-    discount_percentage int NOT NULL CHECK (discount_percentage >= 0 AND discount_percentage <= 100),
+    discount_percentage int NOT NULL CHECK (discount_percentage >= 0 AND discount_percentage <= 25),
     CONSTRAINT fk_account_customer
         FOREIGN KEY(account_id)
         REFERENCES Account_info(account_id)
